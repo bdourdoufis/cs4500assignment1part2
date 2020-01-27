@@ -1,21 +1,48 @@
 #pragma once
 #include "object.h"
-#include <string.h>
-#include <cstddef>
+
+/**
+ * An immutable String class representing a char*
+ * author: chasebish */
 class String : public Object {
-	public:
-		char* str_;
-		size_t size_;
-		String(const char* str);
+public:
 
-		~String();
+  /** VARIABLES */
+  
+  char* str_; // the string value stored
 
-		//Concatenates another string to the front of this one.
-		String* concat(String* other);
+  /** CONSTRUCTORS & DESTRUCTORS **/
 
-		//Checks for equality between this String and the given Object.
-		bool equals(Object* other);
+  /** Creates a String copying str */
+  String(char* s) {}
 
-		//Hashes this String.
-		size_t hash();
+  /** Creates a String copying str */
+  String(const char* s) {}
+
+  /** Copies a String copying the value from str */
+  String(String* s) {}
+
+  /** Clears String from memory */
+  ~String() {}
+
+
+  /** INHERITED METHODS **/
+
+  /** Inherited from Object, generates a hash for a String */
+  size_t hash() {}
+
+  /** Inherited from Object, checks equality between an String and an Object */
+  bool equals(Object* obj) {}
+
+
+  /** STRING METHODS **/
+
+  /** Creates a new String by combining two existing Strings */
+  String* concat(String* s) {}
+
+  /** Returns the current length of the String */
+  size_t size() {}
+
+  /** compares strings on alphabetical order */
+  int cmp(String* s) {}
 };
