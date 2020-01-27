@@ -1,16 +1,16 @@
+//lang::CwC
+
 #pragma once
 #include "object.h"
+#include <cstdlib>
+#include <cstring>
+#include <cstdio> 
 
 /**
  * An immutable String class representing a char*
  * author: chasebish */
 class String : public Object {
 public:
-
-  /** VARIABLES */
-  
-  char* str_; // the string value stored
-
   /** CONSTRUCTORS & DESTRUCTORS **/
 
   /** Creates a String copying str */

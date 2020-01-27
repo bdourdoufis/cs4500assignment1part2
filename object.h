@@ -1,5 +1,7 @@
+//lang::CwC
+
 #pragma once
-#include <stdlib.h>
+#include <cstdlib>
 
 /**
  * A class that represents the top of the object hierarchy.
