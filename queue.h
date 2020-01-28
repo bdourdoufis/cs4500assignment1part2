@@ -1,33 +1,41 @@
+//lang::CwC
+
 #pragma once
 #include "object.h"
 #include <cstddef>
 
 //Queue implementation that uses a simplified underlying linked list to manage data.
 class Queue : public Object{
-	public:
+public:
 
-		Queue();
 
-		~Queue();
+	// Creates an empty queue
+	Queue();
 
-    //Add a new element to the back of the queue.
-		void enqueue(Object* add);
+	// Creates a queue by performing a shallow copy of q's elements.
+	Queue(Queue* q);
 
-    //Remove the element at the front of the queue and return it.
-		Object* dequeue();
+	// Queue destructor
+	~Queue() {}
 
-    //Returns the element at the front of the queue without removing it from the queue.
-		Object* peek();
+	//Add a new element to the back of the queue.
+	void enqueue(Object* add);
 
-    //Returns true if there are no elements in the queue.
-		bool isEmpty();
+	//Remove the element at the front of the queue and return it.
+	Object* dequeue();
 
-    //Determines if the given object is equal to this Queue object.
-		bool equals(Object* o);
+	//Returns the element at the front of the queue without removing it from the queue.
+	Object* peek();
 
-    //Hashes the queue object.
-		size_t hash();
+	//Returns true if there are no elements in the queue.
+	bool isEmpty();
 
-    // Get the size of the queue
-    size_t size();
+	//Determines if the given object is equal to this Queue object.
+	bool equals(Object* o);
+
+	//Hashes the queue object.
+	size_t hash();
+
+	// Get the size of the queue
+	size_t size();
 };

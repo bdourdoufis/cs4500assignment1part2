@@ -1,24 +1,55 @@
+//lang::CwC
+
 #pragma once
 #include "object.h"
-#include <string.h>
-#include <cstddef>
+#include <cstdlib>
+#include <cstring>
+#include <cstdio> 
+
+/**
+ * An immutable String class representing a char*
+ * author: chasebish */
 class String : public Object {
-	public:
-		char* str_;
-		size_t size_;
-		String(const char* str);
+public:
+  /** CONSTRUCTORS & DESTRUCTORS **/
 
-		~String();
+  /** Creates a String copying str */
+  String(char* s) {}
 
-		//Concatenates another string to the front of this one.
-		String* concat(String* other);
+  /** Creates a String copying str */
+  String(const char* s) {}
 
-		//Checks for equality between this String and the given Object.
-		bool equals(Object* other);
+  /** Copies a String copying the value from str */
+  String(String* s) {}
 
-		//Hashes this String.
-		size_t hash();
+  /** Clears String from memory */
+  ~String() {}
 
-    // Returns the length of this string.
-    size_t length();
+
+  /** INHERITED METHODS **/
+
+  /** Inherited from Object, generates a hash for a String */
+  size_t hash() {}
+
+  /** Inherited from Object, checks equality between an String and an Object */
+  bool equals(Object* obj) {}
+
+
+  /** STRING METHODS **/
+
+  /** Creates a new String by combining two existing Strings */
+  String* concat(String* s) {}
+
+  /** Returns the current length of the String */
+  size_t size() {}
+
+  /** compares strings on alphabetical order */
+  int cmp(String* s) {}
+
+  //Hashes this String.
+  size_t hash();
+
+  // Returns the length of this string.
+  size_t length();
+
 };
