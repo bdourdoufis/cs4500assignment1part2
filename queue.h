@@ -4,7 +4,8 @@
 #include "object.h"
 #include <cstddef>
 
-//Queue implementation that uses a simplified underlying linked list to manage data.
+// Standard Queue API. This queue does NOT own its elements; they must be
+// freed separately.
 class Queue : public Object{
 public:
 
