@@ -18,4 +18,7 @@ class String : public Object {
 
 		//Hashes this String.
 		size_t hash();
+
+    // Returns the length of this string.
+    size_t length();
 };
