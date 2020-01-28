@@ -8,11 +8,12 @@
 class Queue : public Object{
 public:
 
-	// Creates an empty queue
-	Queue() {}
 
-	// Creates a queue copying q
-	Queue(Queue* q) {}
+	// Creates an empty queue
+	Queue();
+
+	// Creates a queue by performing a shallow copy of q's elements.
+	Queue(Queue* q);
 
 	// Queue destructor
 	~Queue() {}

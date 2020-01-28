@@ -45,4 +45,11 @@ public:
 
   /** compares strings on alphabetical order */
   int cmp(String* s) {}
+
+  //Hashes this String.
+  size_t hash();
+
+  // Returns the length of this string.
+  size_t length();
+
 };
