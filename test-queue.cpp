@@ -61,4 +61,10 @@ int main() {
 	assert(q2->size() == 2);
 
 	printf("This message indicates that all tests ran successfully.\n");
-}	
+
+  // cleanup
+  delete q;
+  delete q2;
+  delete one;
+  delete two;
+}
