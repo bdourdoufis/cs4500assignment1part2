@@ -63,8 +63,14 @@ int main() {
 	printf("This message indicates that all tests ran successfully.\n");
 
   // cleanup
+
+  // delete each queue
   delete q;
   delete q2;
+
+  // deleting a queue does *not* delete its elements.
+  // therefore, we have to manually deallocate each queue
+  // element.
   delete one;
   delete two;
 }
