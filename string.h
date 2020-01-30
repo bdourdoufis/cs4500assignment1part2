@@ -20,16 +20,16 @@ public:
   String(String* const s);
 
   /* Clears String from memory */
-  virtual ~String();
+  ~String();
 
 
   /** INHERITED METHODS **/
 
   /* Inherited from Object, generates a hash for a String */
-  virtual size_t hash();
+  size_t hash();
 
   /* Inherited from Object, checks equality between an String and an Object */
-  virtual bool equals(Object* const obj);
+  bool equals(Object* const obj);
 
 
   /** STRING METHODS **/
@@ -39,11 +39,11 @@ public:
    * = 0 -> this String is equal to String s
    * > 0 -> this String is greater than String s
    */
-  virtual int cmp(String* const s);
+  int cmp(String* const s);
 
   /* Creates a new String by combining two existing Strings */
-  virtual String* concat(String* const s);
+  String* concat(String* const s);
 
   /* Returns the current length of the String */
-  virtual size_t size();
+  size_t size();
 };
