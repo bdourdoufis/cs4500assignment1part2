@@ -13,9 +13,6 @@ public:
 	// Creates an empty queue
 	Queue();
 
-	// Creates a queue by performing a shallow copy of q's elements.
-	Queue(Queue* q);
-
 	// Queue destructor
 	virtual ~Queue() {}
 
